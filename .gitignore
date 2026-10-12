@@ -1,0 +1,36 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Byte-compiled files and caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Downloaded model files. Recreate them with: python download_model.py
+models/*
+!models/.gitkeep
+
+# Generated run artefacts. The folders themselves are kept so that a fresh
+# checkout already has the structure described in README.md.
+output/*
+!output/faces/
+!output/no_faces/
+!output/failed/
+output/faces/*
+output/no_faces/*
+output/failed/*
+!output/*/.gitkeep
+
+logs/*
+!logs/.gitkeep
+
+# OS cruft
+.DS_Store
+
+# people_sorter.py output
+output_sorted/
+
+# Input photos (personal, multi-GB) - never commit
+Input/

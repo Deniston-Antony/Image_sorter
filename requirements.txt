@@ -1,0 +1,22 @@
+# Core runtime dependencies.
+opencv-python>=4.8.0
+numpy>=1.24.0
+
+# Terminal progress bar.
+tqdm>=4.65.0
+
+# Root certificate bundle. Used only by download_model.py, so that fetching the
+# detection model over HTTPS works on Python builds that ship without a
+# configured system trust store (common on macOS python.org installs).
+certifi>=2023.7.22
+
+# ---- people_sorter.py only (main.py does not need these) ----
+# Person detection and pose keypoints.
+ultralytics>=8.3.0
+# Face landmarks for head angle and eye state. Pinned: 1.0.x aborts at start-up
+# on macOS ("Service is unavailable" from its Metal helper).
+mediapipe==0.10.35
+# CLIP, for the photo-vs-artwork check and similar-photo grouping.
+open_clip_torch>=2.24.0
+# EXIF capture time.
+pillow>=10.0.0
